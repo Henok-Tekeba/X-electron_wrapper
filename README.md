@@ -167,25 +167,9 @@ X-electron_wrapper/
 
 MIT License - feel free to use this project however you'd like.
 
-## Contributing
-
-Contributions, issues, and feature requests are welcome.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
 ## Show your support
 
 Give a star if this project helped you.
-
-## Contact
-
-Henok Tekeba - [@Henok-Tekeba](https://github.com/Henok-Tekeba)
-
-Project Link: [https://github.com/Henok-Tekeba/X-electron_wrapper](https://github.com/Henok-Tekeba/X-electron_wrapper)
 
 ---
 
