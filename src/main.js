@@ -26,10 +26,20 @@ function createWindow() {
     event.preventDefault();
   });
 
-  // Add keyboard shortcut: Ctrl+R to refresh
+// I Added this keyboard shortcuts
   win.webContents.on('before-input-event', (event, input) => {
+    // Ctrl+R to refresh
     if (input.control && input.key.toLowerCase() === 'r') {
       win.webContents.reload();
+      event.preventDefault();
+    }
+    
+    // Ctrl+N for new tweet
+    if (input.control && input.key.toLowerCase() === 'n') {
+      win.webContents.executeJavaScript(`
+        const newTweetButton = document.querySelector('[data-testid="SideNav_NewTweet_Button"]');
+        if (newTweetButton) newTweetButton.click();
+      `);
       event.preventDefault();
     }
   });
