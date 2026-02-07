@@ -1,0 +1,33 @@
+/* Apply to the root container — must fill the window */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* prevent scrollbars breaking the shape */
+  background: transparent; /* crucial */
+}
+
+#app, .root-container {  /* or whatever your main div is */
+  width: 100%;
+  height: 100%;
+  background: #000;           /* or your app's bg color, e.g., X's dark mode */
+  border-radius: 16px;        /* adjust radius: 12-20px looks good for macOS-like */
+  overflow: hidden;           /* clip content to rounded shape */
+  -webkit-app-region: drag;   /* optional: make whole window draggable if no custom titlebar */
+}
+
+/* If you have a custom titlebar (recommended for close/minimize buttons) */
+.titlebar {
+  height: 32px;
+  background: rgba(0,0,0,0.6); /* semi-transparent or blur */
+  -webkit-app-region: drag;    /* drag from here */
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+/* For smoother "squircle" corners like macOS (Electron 37+) */
+#app {
+  border-radius: 20px;
+  -electron-corner-smoothing: system-ui; /* auto: ~60% on macOS, 0% elsewhere */
+  /* or fixed: -electron-corner-smoothing: 60%; for more macOS-like everywhere */
+}
