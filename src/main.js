@@ -42,6 +42,11 @@ function createWindow() {
       `);
       event.preventDefault();
     }
+    // Esc to close window
+    if (input.key.toLowerCase() === 'escape') {
+      win.close();
+      event.preventDefault();
+    }
   });
 }
 
